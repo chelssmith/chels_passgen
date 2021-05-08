@@ -1,45 +1,46 @@
 // Assignment Code
-// spec char array
-var specialChars = [",". "#"];
+
+//spec character array
+var specChar = [",", "." , "<", ">", "/", "?", "'", ";", ":","[", "]", "{", "}", "|", "`" , "~", "!", "@", "#", "$", "%", "^", "&", "*", "(", ")", "_", "-", "=", "+"];
 
 // number array
-var numbArray = ["1", "2"];
+var numbArray = ["1","2","3","4","5","6","7","8","9","0"];
 
-// lowercase array
-var lowerCase = ["a", "b"];
+// lower case array
+var lowerCase = ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"];
 
-// upper case array look up split method
-var upperCase = ["KJDFHKSJDFH"].split();
+// upper case array 
+var upperCase = ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z"];
 
+// var to store length of password
+var length = parseInt (
+  prompt("How many charcters would you like your password to be?")
+)
 
-// function to prompt the user for password options
-  // create a variable to store the length of password 
-  var length = parseInt (
-    prompt("how many charcters would u like your password to be?")
-  )
-
-  // creat conditional to check if pass is actually a number
-  if (Number.isNaN(length) {
-    alert("password must be a number");
-    return null;
-  };
-
-  // condtional state to check if at least 8 characters
-  if (length < 8) {
-    alert("password length must be at least 8 charcters");
-    return null;
-  };
-
-  // condtional statement to check if password length is atleast 128 characters
-  if (length > 128) {
-    alert("password length cannot contain more than 128 charcters");
-    return null;
-  };
+//conditional to check if parse is a number 
+if (Number.isNaN(length)) {
+  alert("Password must be a number");
+  return;
+}
 
 
-  // creat confirmation prompts for the type of characters the user wants to use in their password
 
-  // need to create a conditional statement to check if user inlcuded ATLEAST 1 charac type. return user back to start of application
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 var generateBtn = document.querySelector("#generate");
 
@@ -54,3 +55,4 @@ function writePassword() {
 
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
+
