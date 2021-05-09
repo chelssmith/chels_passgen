@@ -38,26 +38,48 @@ function userPrompt() {
     return null;
   }
 
-  options.length = length ;
+  options.length = length;
 
-  var special = prompt(
-    "Do you want to use special charcaters (such as *&?$/...) Yes or No"
-  );
+  var special = prompt("Do you want to use special charcaters (such as *&?$/...) Yes or No");
 
-  special = special.toUpperCase ();
+  special = special.toUpperCase();
 
-  if (special !== "Yes"  && special !== "No") {
+  if (special !== "Yes" && special !== "No") {
     alert("Please enter Yes or No");
     return null;
-  } 
-    else if (special === "Yes"){
-      options.specChar = specChar;
-    }
-
   }
-    
+  else if (special === "Yes") {
+    options.specChar = specChar;
+  }
+  else {}
 
-  
+  var upper = prompt("Do you want to use uppercase letters Yes or No");
+
+  upper = upper.toUpperCase();
+
+  if (upper !== "Yes" && upper !== "No"){
+    alert("Please enter Yes or No");
+    return null;
+  }
+  else if (upper === "Yes") {
+    options.upperCase = upperCase;
+  }
+  else {}
+
+  var lower = prompt("Do you want to use lowercase letters Yes or No");
+
+  lower = lower.toUpperCase();
+
+  if (lower !== "Yes" && lower !== "No"){
+    alert("Please enter Yes or No");
+    return null;
+  }
+  else if (lower === "Yes"){
+    options.lowerCase = lowerCase
+  }
+
+
+
 
 
 
