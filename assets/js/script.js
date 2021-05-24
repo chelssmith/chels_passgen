@@ -31,44 +31,44 @@ var wordLength = function () {
     return;
   }
 
-  var special = window.prompt("Do you want to use special charcaters (such as *&@#?$/...) Yes or No");
+  var special = window.prompt("Do you want to use special charcaters (such as *&@#?$/...) yes or no");
 
-  if (special !== "Yes" && special !== "No") {
-    alert("Please enter Yes or No");
+  if (special !== "yes" && special !== "no") {
+    alert("Please enter yes or no");
     return;
   }
-  else if (special === "Yes") {
+  else if (special === "yes") {
     choice.specChar = specChar;
   }
 
-  var upper = window.prompt("Do you want to use uppercase letters Yes or No");
+  var upper = window.prompt("Do you want to use uppercase letters yes or no");
 
-  if (upper !== "Yes" && upper !== "No") {
-    alert("Please enter Yes or No");
+  if (upper !== "yes" && upper !== "no") {
+    alert("Please enter yes or no");
     return;
   }
-  else if (upper === "Yes") {
+  else if (upper === "yes") {
     choice.upperCase = upperCase;
   }
 
-  var lower = prompt("Do you want to use lowercase letters Yes or No");
+  var lower = prompt("Do you want to use lowercase letters yes or no");
 
-  if (lower !== "Yes" && lower !== "No") {
-    alert("Please enter Yes or No");
+  if (lower !== "yes" && lower !== "no") {
+    alert("Please enter yes or no");
     return;
   }
-  else if (lower === "Yes") {
+  else if (lower === "yes") {
     choice.lowerCase = lowerCase
   }
 
 
-  var number = prompt("Do you want to use numbers Yes or No");
+  var number = prompt("Do you want to use numbers yes or no");
 
-  if (number !== "Yes" && number !== "No") {
-    alert("Please enter Yes or No");
+  if (number !== "yes" && number !== "no") {
+    alert("Please enter yes or no");
     return;
   }
-  else if (number === "Yes") {
+  else if (number === "yes") {
     choice.numbArray = numbArray
   }
 
@@ -82,9 +82,7 @@ function randomChar (array) {
   var randChoice = array[random];
 }
 
-function passGen (){
-  
-}
+
 
 var generateBtn = document.querySelector("#generate");
 
