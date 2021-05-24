@@ -9,45 +9,46 @@ var lowerCase = "abcdefghjklmnopqrstuvwxyz".split("");
 // upper case array 
 var upperCase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ".split("");
 
+var choice = {};
 
-  // var to store length of password
-  var wordLength = function () {
-    var length = window.prompt("How many charcters would you like your password to be?");
-  
+// var to store length of password
+var wordLength = function () {
+  var length = window.prompt("How many charcters would you like your password to be?");
+
   //conditional to check if parse is a number 
   if (Number.isNaN(length)) {
     alert("Password must be a number");
-    return null;
+    return;
   }
-  var special = prompt("Do you want to use special charcaters (such as *&@#?$/...) Yes or No");
+
+  var special = window.prompt("Do you want to use special charcaters (such as *&@#?$/...) Yes or No");
 
   if (special !== "Yes" && special !== "No") {
     alert("Please enter Yes or No");
-    return null;
+    return;
   }
   else if (special === "Yes") {
-    options.specChar = specChar;
+    choice.specChar = specChar;
   }
 
-  var upper = prompt("Do you want to use uppercase letters Yes or No");
+  var upper = window.prompt("Do you want to use uppercase letters Yes or No");
 
   if (upper !== "Yes" && upper !== "No") {
     alert("Please enter Yes or No");
-    return null;
+    return;
   }
   else if (upper === "Yes") {
-    options.upperCase = upperCase;
+    choice.upperCase = upperCase;
   }
-
 
   var lower = prompt("Do you want to use lowercase letters Yes or No");
 
   if (lower !== "Yes" && lower !== "No") {
     alert("Please enter Yes or No");
-    return null;
+    return;
   }
   else if (lower === "Yes") {
-    options.lowerCase = lowerCase
+    choice.lowerCase = lowerCase
   }
 
 
@@ -55,16 +56,16 @@ var upperCase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ".split("");
 
   if (number !== "Yes" && number !== "No") {
     alert("Please enter Yes or No");
-    return null;
+    return;
   }
   else if (number === "Yes") {
-    options.numbArray = numbArray
+    choice.numbArray = numbArray
   }
- 
+
   return options;
 
 };
-
+wordLength();
 
 //other code before this
 
