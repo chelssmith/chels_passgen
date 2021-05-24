@@ -15,6 +15,16 @@ var choice = {};
 var wordLength = function () {
   var length = window.prompt("How many charcters would you like your password to be?");
 
+  if (length > 128) {
+    alert("Password must be less than 128 characters");
+    return;
+  }
+
+  if (length < 8) {
+    alert("Password must be longer than 8 characters");
+    return;
+  }
+
   //conditional to check if parse is a number 
   if (Number.isNaN(length)) {
     alert("Password must be a number");
@@ -62,13 +72,19 @@ var wordLength = function () {
     choice.numbArray = numbArray
   }
 
-  return options;
+  return choice;
 
 };
 wordLength();
 
-//other code before this
+function randomChar (array) {
+  var random = Math.floor(Math.random() * array.length);
+  var randChoice = array[random];
+}
 
+function passGen (){
+  
+}
 
 var generateBtn = document.querySelector("#generate");
 
