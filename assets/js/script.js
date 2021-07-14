@@ -9,10 +9,12 @@ var lowerCase = "abcdefghjklmnopqrstuvwxyz".split("");
 // upper case array 
 var upperCase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ".split("");
 
-var choice = {};
+
 
 // var to store length of password
-var wordLength = function () {
+function myPass() {
+  var choice = {};
+
   var length = window.prompt("How many charcters would you like your password to be?");
 
   if (length > 128) {
@@ -75,11 +77,39 @@ var wordLength = function () {
   return choice;
 
 };
-wordLength();
+
 
 function randomChar (array) {
-  var random = Math.floor(Math.random() * array.length);
-  var randChoice = array[random];
+  var random = Math.floor(Math.random() * array.length)
+  var rando = array[random]
+
+  return rando;
+}
+
+function passgen() {
+
+var choice = myPass();
+var final =[];
+var potentialCharacters = [];
+
+if(choice.specChar) {
+  potentialCharacters = potentialCharacters.concat(specChar)
+}
+if(choice.numbArray) {
+  potentialCharacters = potentialCharacters.concat(numbArray)
+}
+if(choice.upperCase) {
+  potentialCharacters = potentialCharacters.concat(upperCase)
+}
+if(choice.lowerCase) {
+  potentialCharacters = potentialCharacters.concat(lowerCase)
+}
+
+ for (let i = 0; i < choice.length; i++) {
+  final[i] = randomChar(potentialCharacters)
+ }
+final = final.join("")
+return final;
 }
 
 
@@ -88,10 +118,11 @@ var generateBtn = document.querySelector("#generate");
 
 // Write password to the #password input
 function writePassword() {
-  var password = generatePassword();
+  var password = passgen();
   var passwordText = document.querySelector("#password");
 
   passwordText.value = password;
+  console.log(writePassword)
 
 }
 
